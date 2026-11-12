@@ -1,7 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("dagger.hilt.android.plugin")
+    id("org.jetbrains.kotlin.kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -14,6 +15,10 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.00"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary = true
+        }
     }
 
     buildTypes {
@@ -41,6 +46,7 @@ android {
 
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 
     composeOptions {
@@ -67,7 +73,6 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
     implementation("com.google.dagger:hilt-android:2.51.1")
-    implementation("com.google.dagger:hilt-navigation-compose:1.1.0")
     kapt("com.google.dagger:hilt-android-compiler:2.51.1")
     implementation("androidx.work:work-runtime-ktx:2.9.0")
     implementation("androidx.room:room-runtime:2.6.1")
