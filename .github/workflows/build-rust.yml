@@ -11,10 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions-rs/toolchain@v1
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: stable
-          override: true
 
       - name: Build EXE
         run: cargo build --release
