@@ -1,6 +1,6 @@
 [package]
 name = "teledrive-desktop"
-version = "1.1"
+version = "1.1.0"
 edition = "2021"
 description = "TeleDrive Desktop - Encrypted Telegram Vault (Portable Windows EXE)"
 
