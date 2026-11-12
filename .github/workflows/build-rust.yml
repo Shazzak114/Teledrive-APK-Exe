@@ -1,4 +1,4 @@
-name: Build TeleDrive Desktop EXE
+name: Build EXE
 
 on:
   push:
@@ -6,26 +6,21 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-windows:
+  build:
     runs-on: windows-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Install Rust
-      uses: actions-rs/toolchain@v1
-      with:
-        toolchain: stable
-        profile: minimal
-        override: true
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
 
-    - name: Build Release EXE
-      run: cargo build --release
-      working-directory: ./TeleDrive-Desktop
+      - name: Build EXE
+        run: cargo build --release
+        working-directory: ./TeleDrive-Desktop
 
-    - name: Upload EXE artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: teleDrive-exe
-        path: TeleDrive-Desktop/target/release/teledrive-desktop.exe
+      - uses: actions/upload-artifact@v4
+        with:
+          name: exe
+          path: TeleDrive-Desktop/target/release/teledrive-desktop.exe
