@@ -1,0 +1,32 @@
+[package]
+name = "teledrive-desktop"
+version = "1.01"
+edition = "2021"
+description = "TeleDrive Desktop - Encrypted Telegram Vault (Portable Windows EXE)"
+
+[dependencies]
+aes-gcm = "0.10"
+pbkdf2 = "0.11"
+rand = "0.8"
+digest = "0.10"
+sha2 = "0.10"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+teloxide = "0.23"
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+walkdir = "2"
+uuid = { version = "1", features = ["v4"] }
+chrono = "0.4"
+log = "0.4"
+env_logger = "0.10"
+eframe = "0.27"
+egui = "0.27"
+rfd = "0.11"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"

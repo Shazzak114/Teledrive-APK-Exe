@@ -1,0 +1,7 @@
+TeleDrive v1.00
+- Package: com.teledrive
+- App name: TeleDrive
+- AES-256-GCM encryption for ALL files before upload
+- Cross-platform compatible (Android + Windows)
+- No tracker, no ads, no phone-home
+- Only works with your Telegram vault

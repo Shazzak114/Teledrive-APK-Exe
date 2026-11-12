@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tele_drive_primary">#FF6200EE</color>
+    <color name="tele_drive_primary_dark">#FF3700B3</color>
+    <color name="tele_drive_accent">#FF03DAC5</color>
+    <color name="tele_drive_background">#FFFFFFFF</color>
+    <color name="tele_drive_surface">#FFFFFFFF</color>
+</resources>

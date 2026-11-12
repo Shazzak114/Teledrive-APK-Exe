@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TeleDrive</string>
+    <string name="telegram_vault">Telegram Vault</string>
+    <string name="encrypt_before_upload">Encrypt before upload</string>
+    <string name="decrypt_on_download">Decrypt on download</string>
+    <string name="master_password">Master Password</string>
+    <string name="unlock_to_upload">Unlock to upload</string>
+    <string name="unlock_to_download">Unlock to download</string>
+    <string name="encrypting">Encrypting...</string>
+    <string name="encrypting_perc">Encrypting %d%%...</string>
+    <string name="splitting_file">Splitting file...</string>
+    <string name="splitting_file_perc">Splitting %d%%...</string>
+    <string name="split_fail">Split failed</string>
+    <string name="status_waiting">Waiting...</string>
+    <string name="failed_with_error">Failed: %s</string>
+    <string name="save_success">Saved to downloads</string>
+    <string name="folder_sync_toast">Syncing folders...</string>
+    <string name="metadata_sync_toast">Synced %d folders</string>
+    <string name="no_tracker">No tracker - TeleDrive only talks to your Telegram</string>
+    <string name="wifi_only">Wi-Fi only</string>
+    <string name="mobile_data_allowed">Mobile data allowed</string>
+    <string name="auto_backup">Auto Backup</string>
+</resources>

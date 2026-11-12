@@ -1,0 +1,5 @@
+TeleDrive Desktop v1.01 (Rust)
+- Portable Windows EXE
+- AES-256-GCM + PBKDF2 (200k iterations)
+- Cross-platform compatible with Android TeleDrive
+- No tracker, no ads, no phone-home
