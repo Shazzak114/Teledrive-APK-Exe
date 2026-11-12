@@ -19,8 +19,18 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Set up Android SDK
-      uses: android-actions/setup-android@v3
+    - name: Install Android SDK
+      run: |
+        mkdir -p $ANDROID_HOME
+        cd $ANDROID_HOME
+        wget -q https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -O cmdline-tools.zip
+        unzip -q cmdline-tools.zip
+        mkdir -p cmdline-tools
+        mv cmdline-tools/* cmdline-tools/
+        rm cmdline-tools.zip
+        
+        echo "y" | $ANDROID_HOME/cmdline-tools/bin/sdkmanager --licenses
+        $ANDROID_HOME/cmdline-tools/bin/sdkmanager "platform-tools" "build-tools;34.0.0" "platforms;android-34"
 
     - name: Grant execute permission for gradlew
       run: chmod +x ./TeleDrive-Android/gradlew
@@ -29,6 +39,7 @@ jobs:
       run: ./gradlew assembleDebug
       working-directory: ./TeleDrive-Android
       env:
+        ANDROID_HOME: /opt/android-sdk
         TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
         TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
 
